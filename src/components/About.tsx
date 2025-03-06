@@ -1,6 +1,6 @@
 import { Check, Copy } from "lucide-react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-import { grid1, grid2, grid3, grid4 } from "../assets";
 import { useCopyToClipboard } from "../lib/utils/hooks";
 import SectionWrapper from "./section-wrapper";
 import { EarthCanvas } from "./canvas";
@@ -20,8 +20,12 @@ const About = ({ isWebglEnabled }: { isWebglEnabled: boolean; }) => {
             <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src={grid1} className="w-full sm:h-[276px] h-fit object-contain" alt="grid1" />
-
+                        <LazyLoadImage
+                            src={"./about/grid1.png"}
+                            className="w-full sm:h-[276px] h-fit object-contain"
+                            alt="grid1"
+                            effect="opacity"
+                        />
                         <div>
                             <p className="grid-headtext">
                                 Hi, I'm Murtaza
@@ -34,8 +38,12 @@ const About = ({ isWebglEnabled }: { isWebglEnabled: boolean; }) => {
                 </div>
                 <div className="col-span-1 xl:row-span-3">
                     <div className="grid-container">
-                        <img src={grid2} className="w-full sm:h-[276px] h-fit object-contain" alt="grid2" />
-
+                        <LazyLoadImage
+                            src={"./about/grid2.png"}
+                            className="w-full sm:h-[276px] h-fit object-contain"
+                            alt="grid2"
+                            effect="opacity"
+                        />
                         <div>
                             <p className="grid-headtext">
                                 Tech stack
@@ -69,7 +77,12 @@ const About = ({ isWebglEnabled }: { isWebglEnabled: boolean; }) => {
                 </div>
                 <div className="xl:col-span-2 xl:row-span-3">
                     <div className="grid-container">
-                        <img src={grid3} alt="grid3" className="w-full sm:h-[266px] h-fit object-contain" />
+                        <LazyLoadImage
+                            src={"./about/grid3.png"}
+                            className="w-full sm:h-[266px] h-fit object-contain"
+                            alt="grid3"
+                            effect="opacity"
+                        />
                         <div className="text-center mx-auto lg:mt-20">
                             <p className="grid-headtext">
                                 My Passion for Coding
@@ -84,7 +97,12 @@ const About = ({ isWebglEnabled }: { isWebglEnabled: boolean; }) => {
                 </div>
                 <div className="xl:col-span-1 xl:row-span-2 md:col-span-2">
                     <div className="grid-container">
-                        <img src={grid4} alt="grid4" className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top" />
+                        <LazyLoadImage
+                            src={"./about/grid4.png"}
+                            className="w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top"
+                            alt="grid4"
+                            effect="opacity"
+                        />
                         <div className="space-y-2">
                             <p className="grid-subtext text-center">
                                 Contact me

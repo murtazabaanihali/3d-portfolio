@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
-import { globe } from "../../assets";
 
 const Earth = ({ scale = 2.5 }: { scale?: number }) => {
     const earth = useGLTF("./planet/scene.gltf");
@@ -43,7 +42,12 @@ const EarthCanvas = ({ isWebglEnabled, scale = 2.5 }: { isWebglEnabled: boolean;
                 <Preload all />
             </Suspense>
         </Canvas>
-            : <img src={globe} alt="Globe" className="w-full h-full object-contain p-4" />
+            : <img
+                src={"./globe.png"}
+                alt="Globe"
+                className="w-full h-full object-contain p-4"
+                loading="lazy"
+            />
     );
 };
 

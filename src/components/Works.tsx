@@ -1,10 +1,9 @@
-import { motion } from "framer-motion";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { Eye, Github, Scan } from "lucide-react";
 import { useState } from "react";
 
 import { styles } from "../styles";
 import { Project, projects } from "../lib/constants";
-import { fadeIn, textVariant } from "../lib/utils/motion";
 import SectionWrapper from "./section-wrapper";
 import {
     Carousel,
@@ -34,10 +33,11 @@ const ProjectCard = ({ ...props }: Project & { onZoomClick: (x: string[]) => voi
                         {props.images.map((img, index) => (
                             <CarouselItem key={index}>
                                 <div className="size-full md:rounded-2xl overflow-hidden rounded-md">
-                                    <img
+                                    <LazyLoadImage
                                         src={img}
                                         alt={props.name}
                                         className="w-full object-cover object-top md:hover:scale-105 transition-transform md:rounded-2xl aspect-[3/2] rounded-md"
+                                        effect="opacity"
                                     />
                                 </div>
                             </CarouselItem>
@@ -106,21 +106,20 @@ const Works = () => {
 
     return (
         <>
-            <motion.div variants={textVariant()}>
+            <div>
                 <p className={`${styles.sectionSubText}`}>My work</p>
                 <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-            </motion.div>
+            </div>
 
             <div className="w-full flex">
-                <motion.p
-                    variants={fadeIn("", "", 0.1, 1)}
+                <p
                     className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
                 >
                     These projects showcase my skills and experience through real-world examples of my work. Each project is briefly described, reflecting my ability to solve complex problems, work with different technologies, and manage projects effectively.
                     <br />
                     <br />
                     Some project's code is not made public to prevent copying. If you wish to hire me and need the source code, please contact me.
-                </motion.p>
+                </p>
             </div>
 
             {isMobile ? (
@@ -157,10 +156,11 @@ const Works = () => {
                             {modal.images.map((img, index) => (
                                 <CarouselItem key={index}>
                                     <div className="size-full flex items-center justify-center bg-black">
-                                        <img
+                                        <LazyLoadImage
                                             src={img}
                                             alt={`${name}_image`}
                                             className="max-h-[500px] object-cover object-top"
+                                            effect="opacity"
                                         />
                                     </div>
                                 </CarouselItem>

@@ -1,7 +1,7 @@
 import { Facebook, Github, Instagram } from "lucide-react";
 
-import { getAllImageFilesFromFolder } from "../assets";
 import { TwitterIcon } from "../components/ui/icons";
+import { getAllImageFilesFromFolder } from "./utils";
 
 const CONTACT_EMAIL = "murtaza.contact@proton.me";
 

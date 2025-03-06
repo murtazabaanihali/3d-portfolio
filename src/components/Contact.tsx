@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import { ArrowUpRight, Check, Mail } from "lucide-react";
 
 import SectionWrapper from "./section-wrapper";
-import { terminal } from "../assets";
 import { cn } from "../lib/utils";
 import { styles } from "../styles";
 import { Input } from "./ui/input";
@@ -42,9 +41,8 @@ const Contact = () => {
     };
 
     return (
-        <div className="max-lg:bg-black-200 max-lg:rounded-xl max-lg:py-5">
-            <div className="relatove lg:min-h-screen flex items-center justify-center flex-col">
-                <img src={terminal} className="absolute inset-0 min-h-screen max-lg:hidden" />
+        <div className="bg-black-200 rounded-xl py-5 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center flex-col">
                 <div className="contact-container">
                     <h3 className={cn(styles.sectionHeadText, "md:text-[30px]")}>
                         Let's talk
