@@ -64,7 +64,7 @@ const projects: Project[] = [
             frontend: ["Vite.js", "React JS", "Tailwind CSS", "Shadcn UI", "Typescript"],
             deployment: ["Vercel"]
         },
-        preview: "https://dhesend.vercel.app/",
+        preview: "https://murtazabaanihali.vercel.app/",
         github: "https://github.com/murtazabaanihali/3d-portfolio"
     },
 ];
