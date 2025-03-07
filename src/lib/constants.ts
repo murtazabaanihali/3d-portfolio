@@ -1,4 +1,4 @@
-import { Facebook, Github, Instagram } from "lucide-react";
+import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
 
 import { TwitterIcon } from "../components/ui/icons";
 import { getAllImageFilesFromFolder } from "./utils";
@@ -70,10 +70,31 @@ const projects: Project[] = [
 ];
 
 const SOCIAL_LINKS = [
-    { icon: Github, link: "https://github.com/murtazabaanihali" },
-    { icon: TwitterIcon, link: "https://x.com/murtazabanihali" },
-    { icon: Facebook, link: "https://facebook.com/murtazabaanihali" },
-    { icon: Instagram, link: "https://instagram.com/murtazabaanihali" },
+    {
+        icon: Github,
+        link: "https://github.com/murtazabaanihali",
+        title: "Github"
+    },
+    {
+        icon: Linkedin,
+        link: "https://www.linkedin.com/in/murtazabaanihali/",
+        title: "Linkedin"
+    },
+    {
+        icon: TwitterIcon,
+        link: "https://x.com/murtazabanihali",
+        title: "Twitter"
+    },
+    {
+        icon: Facebook,
+        link: "https://facebook.com/murtazabaanihali",
+        title: "Facebook"
+    },
+    {
+        icon: Instagram,
+        link: "https://instagram.com/murtazabaanihali",
+        title: "Instagram"
+    },
 ];
 
 export {

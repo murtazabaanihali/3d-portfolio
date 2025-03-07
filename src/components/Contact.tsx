@@ -102,8 +102,8 @@ const Contact = () => {
                                 {isCopied ? <Check size={16} /> : <Mail size={16} />}
                             </Button>
                             {SOCIAL_LINKS.map((item, i) => (
-                                <a key={i} href={item.link} target="_blank">
-                                    <Button type="button" size={"icon"} className="rounded-full cursor-pointer ring-1 ring-black-300">
+                                <a key={i} href={item.link} target="_blank" title={item.title}>
+                                    <Button title={item.title} type="button" size={"icon"} className="rounded-full cursor-pointer ring-1 ring-black-300">
                                         <item.icon className="text-white" />
                                     </Button>
                                 </a>
