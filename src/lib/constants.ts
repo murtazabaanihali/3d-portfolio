@@ -25,8 +25,9 @@ export type Project = {
     description: string;
     images: string[];
     techStack: Partial<Record<"frontend" | "backend" | "deployment", string[]>>;
-    preview: string;
+    preview?: string;
     github?: string;
+    custom_class?: string;
 };
 
 const projects: Project[] = [
@@ -66,6 +67,18 @@ const projects: Project[] = [
         },
         preview: "https://murtazabaanihali.vercel.app/",
         github: "https://github.com/murtazabaanihali/3d-portfolio"
+    },
+    {
+        name: "Breathings App",
+        description:
+            "Breathings is a beautifully designed Android app designed to enhance relaxation, mindfulness, and sleep through soothing breathing exercises and calming melodies. With its intuitive and visually appealing user interface, the app offers a seamless experience for users seeking stress relief, better sleep, or mindful breathing practices. Breathings provides a unique and immersive way to achieve peace and tranquility.",
+        images: getAllImageFilesFromFolder("breathings"),
+        techStack: {
+            frontend: ["React Native", "Expo", "Redux"],
+            backend: ["Django"],
+        },
+        github: "https://github.com/murtazabaanihali/breathings",
+        custom_class: "aspect-auto max-h-60 md:rounded-sm rounded-sm"
     },
 ];
 

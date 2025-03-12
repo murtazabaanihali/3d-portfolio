@@ -17,6 +17,7 @@ import {
     DialogContent,
 } from "./ui/dialog";
 import { useIsMobile } from "../lib/utils/hooks";
+import { cn } from '../lib/utils';
 
 const techStackColors = {
     frontend: "blue-text-gradient",
@@ -32,11 +33,11 @@ const ProjectCard = ({ ...props }: Project & { onZoomClick: (x: string[]) => voi
                     <CarouselContent>
                         {props.images.map((img, index) => (
                             <CarouselItem key={index}>
-                                <div className="size-full md:rounded-2xl overflow-hidden rounded-md">
+                                <div className="size-full md:rounded-2xl overflow-hidden rounded-md flex justify-center">
                                     <LazyLoadImage
                                         src={img}
                                         alt={props.name}
-                                        className="w-full object-cover object-top md:hover:scale-105 transition-transform md:rounded-2xl aspect-[3/2] rounded-md"
+                                        className={cn("w-full object-cover object-top md:hover:scale-105 transition-transform md:rounded-2xl aspect-[3/2] rounded-md", props.custom_class)}
                                         effect="opacity"
                                     />
                                 </div>
@@ -90,7 +91,7 @@ const ProjectCard = ({ ...props }: Project & { onZoomClick: (x: string[]) => voi
 };
 
 const Works = () => {
-    const isMobile = useIsMobile();
+    const isMobile = useIsMobile(876);
     const [modal, setModal] = useState<{ open: boolean; images: string[] }>({
         open: false,
         images: []
@@ -150,12 +151,12 @@ const Works = () => {
                 </div>
             )}
             <Dialog open={modal.open} onOpenChange={onModalOpenChange}>
-                <DialogContent className="bg-transparent sm:max-w-7xl p-0 w-full border overflow-hidden">
+                <DialogContent className="bg-black sm:max-w-7xl p-0 w-full border overflow-hidden">
                     <Carousel>
                         <CarouselContent>
                             {modal.images.map((img, index) => (
                                 <CarouselItem key={index}>
-                                    <div className="size-full flex items-center justify-center bg-black">
+                                    <div className="size-full flex items-center justify-center">
                                         <LazyLoadImage
                                             src={img}
                                             alt={`${name}_image`}

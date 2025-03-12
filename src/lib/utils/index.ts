@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs))
 };
 
-type ProjectImageFolderKeys = "dhegen" | "dhesend" | "portfolio";
+type ProjectImageFolderKeys = "dhegen" | "dhesend" | "portfolio" | "breathings";
 export const getAllImageFilesFromFolder = (folderKey: ProjectImageFolderKeys) => {
     let images: string[] = [];
 
@@ -17,6 +17,8 @@ export const getAllImageFilesFromFolder = (folderKey: ProjectImageFolderKeys) =>
             images = Object.keys(import.meta.glob("/public/projects/dhesend/*")); break;
         case "portfolio":
             images = Object.keys(import.meta.glob("/public/projects/portfolio/*")); break;
+        case "breathings":
+            images = Object.keys(import.meta.glob("/public/projects/breathings/*")); break;
         default:
             break;
     };
