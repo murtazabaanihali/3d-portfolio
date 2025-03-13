@@ -17,7 +17,7 @@ const Hero = ({ isWebglEnabled }: { isWebglEnabled: boolean; }) => {
                         Hi, I'm <span className='text-[#915EFF]'>Murtaza</span>
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100/80`}>
-                        A Full Stack Developer who handles everything <br className="max-sm:hidden lg:hidden" /> from development to deployment. I develop <br className="max-sm:hidden lg:hidden" /> seamless, user-friendly web & mobile applications <br className="max-sm:hidden lg:hidden" /> with clean code and scalable solutions. <br className="max-sm:hidden lg:hidden" /> Let’s build something amazing!
+                        A Full Stack Developer who handles everything <br className="max-sm:hidden lg:hidden" /> from development to deployment. I develop <br className="max-sm:hidden lg:hidden" /> seamless, user-friendly web, mobile & desktop applications <br className="max-sm:hidden lg:hidden" /> with clean code and scalable solutions. <br className="max-sm:hidden lg:hidden" /> Let’s build something amazing!
                     </p>
                 </div>
             </div>
